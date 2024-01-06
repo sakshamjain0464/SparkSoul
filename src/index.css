@@ -5,3 +5,9 @@
 body{
   overflow: hidden;
 }
+
+@media screen and (max-width : 650px) {
+  body{
+    overflow-y: visible;
+  }
+}

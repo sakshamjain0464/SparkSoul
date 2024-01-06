@@ -14,12 +14,14 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path='' element={<Hero/>}/>
-        <Route path='quotes' element={<Quotes/>}/>
-        <Route path='inspiration' element={<Inspiration/>}/>
-        <Route path='advice' element={<Advice/>}/>
-      </Routes>
+        <main className='min-h-[86vh] sm:h-[81vh] sm:min-w-[70vw] sm:mb-0 mb-10'>
+          <Routes>
+            <Route path='' element={<Hero/>}/>
+            <Route path='quotes' element={<Quotes/>}/>
+            <Route path='inspiration' element={<Inspiration/>}/>
+            <Route path='advice' element={<Advice/>}/>
+          </Routes>
+        </main>
       <Footer />
     </>
   )
