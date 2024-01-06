@@ -1,5 +1,6 @@
 import { useState } from 'react'
-
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 import './App.css'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Welcome to SparkSoul</h1>
+      <Navbar />
+      <Footer />
     </>
   )
 }
