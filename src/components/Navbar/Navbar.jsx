@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -18,10 +19,10 @@ export default function Navbar() {
         </div>
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">
-            <a href="#" className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Quotes</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Inspiration</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Today&apos;s Advice</a>
+            <NavLink to="/" className={({isActive}) =>  `${(isActive)?'bg-gray-900 text-white':'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium`}>Home</NavLink>
+            <NavLink to="/quotes" className={({isActive}) =>  `${(isActive)?'bg-gray-900 text-white':'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium`}>Quotes</NavLink>
+            <NavLink to="/inspiration" className={({isActive}) =>  `${(isActive)?'bg-gray-900 text-white':'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium`}>Inspiration</NavLink>
+            <NavLink to="/advice" className={({isActive}) =>  `${(isActive)?'bg-gray-900 text-white':'text-gray-300 hover:bg-gray-700 hover:text-white'} rounded-md px-3 py-2 text-sm font-medium`}>Today&apos;s Advice</NavLink>
           </div>
         </div>
       </div>
@@ -34,10 +35,10 @@ export default function Navbar() {
   
   <div className="sm:hidden" id="mobile-menu">
     <div className="space-y-1 px-2 pb-3 pt-2">
-      <a href="#" className="text-center bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
-      <a href="#" className="text-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Quotes</a>
-      <a href="#" className="text-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Inspiration</a>
-      <a href="#" className="text-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Today&apos;s Advice</a>
+      <NavLink to="/" className={({isActive}) => `text-center ${(isActive)?'bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'} block rounded-md px-3 py-2 text-base font-medium`} aria-current="page">Home</NavLink>
+      <NavLink to="/quotes" className={({isActive}) => `text-center ${(isActive)?'bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'} block rounded-md px-3 py-2 text-base font-medium`}>Quotes</NavLink>
+      <NavLink to="/inspiration" className={({isActive}) => `text-center ${(isActive)?'bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'} block rounded-md px-3 py-2 text-base font-medium`}>Inspiration</NavLink>
+      <NavLink to="/advice" className={({isActive}) => `text-center ${(isActive)?'bg-gray-900 text-white': 'text-gray-300 hover:bg-gray-700 hover:text-white'} block rounded-md px-3 py-2 text-base font-medium`}>Today&apos;s Advice</NavLink>
     </div>
   </div>
 </nav>
