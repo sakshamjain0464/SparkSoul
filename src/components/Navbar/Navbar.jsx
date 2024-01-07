@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const [navOpen, setNavOpen] = useState(false)
+  const [navOpen, setNavOpen] = useState(false);
   return (
     <>
       <nav className="sm:h-[8vh] h-fit bg-gray-800">
@@ -67,10 +67,12 @@ export default function Navbar() {
           </div>
         </div>
         <div className="w-full text-white flex justify-center text-xl pb-2">
-          <i className={`fa-solid ${(navOpen)?'fa-xmark':'fa-bars'} sm:hidden`} onClick={() => setNavOpen((prev) => !prev)}></i>
+          <i
+            className={`fa-solid ${navOpen ? "fa-xmark" : "fa-bars"} sm:hidden`}
+            onClick={() => setNavOpen((prev) => !prev)}></i>
         </div>
 
-        <div className={`${(navOpen)?'block':'hidden'}`} id="mobile-menu">
+        <div className={`${navOpen ? "block" : "hidden"}`} id="mobile-menu">
           <div className="space-y-1 px-2 pb-3 pt-2">
             <NavLink
               to="/"

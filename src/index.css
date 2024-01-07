@@ -2,12 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   overflow: hidden;
 }
 
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(209, 213, 219);
+    border-radius: 100vh;
+    transition: all 0.5s;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(17, 24, 39);
+  }
+}
+
+
+
 @media screen and (max-width : 650px) {
-  body{
+  body {
     overflow-y: visible;
   }
 }
