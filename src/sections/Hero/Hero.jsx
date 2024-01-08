@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import QuoteCard from '../../components/QuoteCard/QuoteCard'
+import QuoteCard from "../../components/QuoteCard/QuoteCard";
 
 export default function Hero() {
   const [quote, setQuote] = useState("");
@@ -18,7 +18,6 @@ export default function Hero() {
     fetchQuote();
   }, []);
 
-
   return (
     <div className="h-full w-full flex items-center justify-center">
       <div className="h-full w-[90%] sm:max-w-[75%] sm:w-fit mt-5 sm:mt-20">
@@ -35,12 +34,12 @@ export default function Hero() {
             </h1>
           </div>
           {loaded ? (
-            <QuoteCard Quote={quote}/>
+            <QuoteCard Quote={quote} />
           ) : (
             <div className="mt-5">Loading...</div>
           )}
         </div>
-        <div className={`${(loaded)?'mt-2':'mt-8'}`}>
+        <div className={`${loaded ? "mt-2" : "mt-8"}`}>
           <Link
             to="/quotes"
             className="bg-gray-800 px-5 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">

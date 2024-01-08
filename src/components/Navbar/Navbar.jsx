@@ -10,7 +10,11 @@ export default function Navbar() {
           <div className="relative flex h-16 items-center justify-between">
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex flex-shrink-0 items-center">
-                <NavLink to={'/'}><h1 className="text-2xl text-white font-semibold">SparkSoul</h1></NavLink>
+                <NavLink to={"/"}>
+                  <h1 className="text-2xl text-white font-semibold">
+                    SparkSoul
+                  </h1>
+                </NavLink>
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
@@ -61,7 +65,11 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <a href="https://github.com/sakshamjain0464/SparkSoul" className="hidden sm:block" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/sakshamjain0464/SparkSoul"
+              className="hidden sm:block"
+              target="_blank"
+              rel="noreferrer">
               <i className="fa-brands fa-github text-3xl text-gray-300 cursor-pointer hover:text-white"></i>
             </a>
           </div>

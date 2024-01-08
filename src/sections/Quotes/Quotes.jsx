@@ -62,9 +62,7 @@ export default function Quotes() {
             className="w-full mt-3 h-fit sm:overflow-y-auto scrollbar"
             id="scroll">
             {quotes.length > 0 ? (
-              quotes.map((Quote) => (
-                <QuoteCard key={Quote._id} Quote={Quote}/>
-              ))
+              quotes.map((Quote) => <QuoteCard key={Quote._id} Quote={Quote} />)
             ) : (
               <p className="mt-2 sm:text-2xl font-semibold">
                 Sorry&#33; No Quotes Found for <q>{searchTag}</q>

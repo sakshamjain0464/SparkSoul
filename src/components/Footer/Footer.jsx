@@ -5,17 +5,29 @@ export default function Footer() {
         <p>Created By Saksham Jain</p>
       </div>
       <div className="justify-center w-full flex sm:w-1/2 sm:justify-end">
-        <a href="">
+        <a
+          href="https://github.com/sakshamjain0464/"
+          target="_blank"
+          rel="noreferrer">
           <i className="fa-brands fa-github text-xl text-gray-300 cursor-pointer mx-3 hover:text-white"></i>
         </a>
-        <a href="">
+        <a
+          href="https://www.linkedin.com/in/saksham-jain-15bab2205/"
+          target="_blank"
+          rel="noreferrer">
           <i className="fa-brands fa-linkedin text-xl text-gray-300 cursor-pointer mx-3 hover:text-white"></i>
         </a>
-        <a href="">
+        <a
+          href="https://www.instagram.com/__saksham_jain/"
+          target="_blank"
+          rel="noreferrer">
           <i className="fa-brands fa-instagram text-xl text-gray-300 cursor-pointer mx-3 hover:text-white"></i>
         </a>
-        <a href="">
-          <i className="fa-solid fa-code text-xl text-gray-300 cursor-pointer mx-3 hover:text-white"></i>
+        <a
+          href="https://twitter.com/SakshamJain0464"
+          target="_blank"
+          rel="noreferrer">
+          <i className="fa-brands fa-twitter text-xl text-gray-300 cursor-pointer mx-3 hover:text-white"></i>
         </a>
       </div>
     </footer>

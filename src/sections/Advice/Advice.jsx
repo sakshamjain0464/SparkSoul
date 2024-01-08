@@ -10,7 +10,7 @@ export default function Hero() {
     async function fetchQuote() {
       const data = await fetch("https://api.adviceslip.com/advice");
       const jsonData = await data.json();
-      setQuote({_id : jsonData.slip.id, content:jsonData.slip.advice, author: 'Saksham Jain'});
+      setQuote({_id : jsonData.slip.id, content:jsonData.slip.advice, author: 'SparkSoul'});
       setTimeout(() => {
         setLoaded(true);
       }, 100);
