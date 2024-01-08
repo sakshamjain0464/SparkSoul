@@ -36,9 +36,9 @@ export default function Hero() {
         </div>
         <div className={`${(loaded)?'mt-2':'mt-8'} flex justify-center w-full`}>
           <Link
-            to="/advice"
+            to="/inspiration"
             className="bg-gray-800 px-5 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white w-fit">
-            Get new Advice <i className="fa-solid fa-repeat" />
+            Get Inspired <i className="fa-solid fa-arrow-right" />
           </Link>
         </div>
       </div>
