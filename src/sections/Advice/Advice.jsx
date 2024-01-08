@@ -8,9 +8,9 @@ export default function Hero() {
 
   useEffect(() => {
     async function fetchQuote() {
-      const data = await fetch("https://api.quotable.io/quotes/random");
+      const data = await fetch("https://api.adviceslip.com/advice");
       const jsonData = await data.json();
-      setQuote(jsonData[0]);
+      setQuote({_id : jsonData.slip.id, content:jsonData.slip.advice, author: 'Saksham Jain'});
       setTimeout(() => {
         setLoaded(true);
       }, 100);
@@ -22,16 +22,10 @@ export default function Hero() {
   return (
     <div className="h-full w-full flex items-center justify-center">
       <div className="h-full w-[90%] sm:max-w-[75%] sm:w-fit mt-5 sm:mt-20">
-        <div className="w-full flex items-center justify-center flex-col mb-10 text-center">
-          <h1 className="sm:text-5xl text-3xl mb-5 ">Welcome to SparkSoul</h1>
-          <p className="text-xl tracking-widest">
-            Your one stop destination for all quotes.
-          </p>
-        </div>
         <div className="flex justify-center flex-col w-full">
           <div className="text-gray-900">
             <h1 className="text-3xl tracking-wider font-medium">
-              Today&apos;s Quote
+              Today&apos;s Advice
             </h1>
           </div>
           {loaded ? (
@@ -40,11 +34,11 @@ export default function Hero() {
             <div className="mt-5">Loading...</div>
           )}
         </div>
-        <div className="mt-8">
+        <div className={`${(loaded)?'mt-2':'mt-8'} flex justify-center w-full`}>
           <Link
-            to="/quotes"
-            className="bg-gray-800 px-5 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
-            Get More Quotes <i className="fa-solid fa-arrow-right" />
+            to="/advice"
+            className="bg-gray-800 px-5 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white w-fit">
+            Get new Advice <i className="fa-solid fa-repeat" />
           </Link>
         </div>
       </div>

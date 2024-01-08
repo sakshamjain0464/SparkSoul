@@ -61,9 +61,9 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="hidden sm:block">
+            <a href="https://github.com/sakshamjain0464/SparkSoul" className="hidden sm:block" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-github text-3xl text-gray-300 cursor-pointer hover:text-white"></i>
-            </div>
+            </a>
           </div>
         </div>
         <div className="w-full text-white flex justify-center text-xl pb-2">

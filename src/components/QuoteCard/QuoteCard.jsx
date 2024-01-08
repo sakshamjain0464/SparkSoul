@@ -18,7 +18,7 @@ export default function QuoteCard({Quote}) {
 
   return (
     <div
-      className="sm:my-6 border sm:w-fit w-full sm:max-w-[95%] sm:ml-8 sm:mr-12 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 tracking-normal py-8 px-8 sm:px-16 flex flex-col relative">
+      className="sm:my-6 border sm:w-fit sm:min-h-[20%] sm:min-w-[50%] w-full sm:max-w-[95%] sm:ml-8 sm:mr-12 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 tracking-normal py-8 px-8 sm:px-16 flex flex-col items-center relative">
       <div className="sm:text-lg text-base leading-loose mb-3 sm:text-left text-center sm:mt-0 mt-3">
         <blockquote>
           <q>{Quote.content}</q>
@@ -46,7 +46,7 @@ export default function QuoteCard({Quote}) {
               .nextSibling.classList.replace("block", "hidden")
           }></i>
         <p
-          className={`absolute text-xs font-semibold text-center top-[-25px] right-[-5px] hidden hover:top-[-10px] text-gray-900`}>
+          className={`absolute text-xs font-semibold text-center top-[-35px] right-[-25px] hidden hover:top-[-10px] text-gray-900 w-fit px-5 py-2`}>
           Copy&#33;
         </p>
       </div>

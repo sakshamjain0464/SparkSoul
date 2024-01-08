@@ -40,7 +40,7 @@ export default function Hero() {
             <div className="mt-5">Loading...</div>
           )}
         </div>
-        <div className="mt-8">
+        <div className={`${(loaded)?'mt-2':'mt-8'}`}>
           <Link
             to="/quotes"
             className="bg-gray-800 px-5 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white">
