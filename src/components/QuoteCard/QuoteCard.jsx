@@ -17,7 +17,7 @@ export default function QuoteCard({ Quote }) {
   };
 
   return (
-    <div className="sm:my-6 border sm:w-fit sm:min-h-[20%] sm:min-w-[50%] w-full sm:max-w-[95%] sm:ml-8 sm:mr-12 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 tracking-normal py-8 px-8 sm:px-16 flex flex-col items-center relative">
+    <div className="sm:my-6 my-4 border sm:w-fit sm:min-h-[20%] sm:min-w-[50%] w-full sm:max-w-[95%] sm:ml-8 sm:mr-12 rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 tracking-normal py-8 px-8 sm:px-16 flex flex-col items-center relative">
       <div className="sm:text-lg text-base leading-loose mb-3 sm:text-left text-center sm:mt-0 mt-3">
         <blockquote>
           <q>{Quote.content}</q>
