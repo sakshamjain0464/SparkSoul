@@ -7,6 +7,7 @@ import Quotes from "./sections/Quotes/Quotes.jsx";
 import Hero from "./sections/Hero/Hero.jsx";
 import Inspiration from "./sections/Inspiration/Inspiration.jsx";
 import Advice from "./sections/Advice/Advice.jsx";
+import Error from "./sections/Error/Error.jsx";
 
 const router = createBrowserRouter(
   [
@@ -29,6 +30,10 @@ const router = createBrowserRouter(
         {
           path: "advice",
           element: <Advice />,
+        },
+        {
+          path: "*",
+          element: <Error />,
         },
       ],
     },
