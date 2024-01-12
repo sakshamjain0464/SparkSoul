@@ -24,15 +24,19 @@ export default function Quotes() {
 
   useEffect(() => {
     async function fetchQuotes() {
-      const data = await fetch(
-        `https://api.quotable.io/quotes?tags=${searchTag}`
-      );
-      const jsonData = await data.json();
-      setQuotes(jsonData.results);
-      if (!loaded) {
-        setTimeout(() => {
-          setLoaded(true);
-        }, 1000);
+      try {
+        const data = await fetch(
+          `https://api.quotable.io/quotes?tags=${searchTag}`
+        );
+        const jsonData = await data.json();
+        setQuotes(jsonData.results);
+        if (!loaded) {
+          setTimeout(() => {
+            setLoaded(true);
+          }, 1000);
+        }
+      } catch (error) {
+        alert("Api not reachable, Kindly try after some time");
       }
     }
     fetchQuotes();
