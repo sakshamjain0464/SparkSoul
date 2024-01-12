@@ -8,12 +8,16 @@ export default function Hero() {
 
   useEffect(() => {
     async function fetchQuote() {
-      const data = await fetch("https://api.quotable.io/quotes/random");
-      const jsonData = await data.json();
-      setQuote(jsonData[0]);
-      setTimeout(() => {
-        setLoaded(true);
-      }, 100);
+      try {
+        const data = await fetch("https://api.quotable.io/quotes/random");
+        const jsonData = await data.json();
+        setQuote(jsonData[0]);
+        setTimeout(() => {
+          setLoaded(true);
+        }, 100);
+      } catch (error) {
+        alert("Api not reachable, Kindly try after some time");
+      }
     }
     fetchQuote();
   }, []);

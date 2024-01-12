@@ -9,11 +9,15 @@ export default function Quotes() {
 
   useEffect(() => {
     async function fetchTags() {
-      const data = await fetch("https://api.quotable.io/tags");
-      const jsonData = await data.json();
-      const last = jsonData.pop();
-      setTags(jsonData);
-      setSearchTag(jsonData[0].slug);
+      try {
+        const data = await fetch("https://api.quotable.io/tags");
+        const jsonData = await data.json();
+        const last = jsonData.pop();
+        setTags(jsonData);
+        setSearchTag(jsonData[0].slug);
+      } catch (error) {
+        alert("Api not reachable, Kindly try after some time");
+      }
     }
     fetchTags();
   }, []);

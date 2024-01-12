@@ -7,7 +7,8 @@ export default function Inspiration() {
 
   useEffect(() => {
     async function fetchQuotes() {
-      const data = await fetch(`https://type.fit/api/quotes`);
+      try{
+        const data = await fetch(`https://type.fit/api/quotes`);
       const jsonData = await data.json();
       const inspirationalQuotes = [];
       jsonData.forEach((quote, index) => {
@@ -22,6 +23,10 @@ export default function Inspiration() {
         setTimeout(() => {
           setLoaded(true);
         }, 1000);
+      }
+      }
+      catch(error){
+        alert("Api not reachable, Kindly try after some time");
       }
     }
     fetchQuotes();
